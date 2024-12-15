@@ -1,9 +1,10 @@
-﻿open System
+open System
 open System.IO
 open Newtonsoft.Json
 open System.Drawing
 open System.Windows.Forms
 
+// GUI creation
 type MainForm() as this =
     inherit Form()
 
@@ -53,8 +54,6 @@ type MainForm() as this =
         deleteButton.Click.Add(fun _ -> this.deleteWord())
         searchButton.Click.Add(fun _ -> this.searchWord())
         saveButton.Click.Add(fun _ -> this.saveToFile())
-
-
 
     member private this.loadDictionary() =
         try
